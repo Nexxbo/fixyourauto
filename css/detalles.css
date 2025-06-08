@@ -1,0 +1,163 @@
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #3498db;
+    --color-accent: #e67e22;
+    --color-text: #333;
+    --color-border: #ecf0f1;
+    --color-bg: #f8f9fa;
+    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --header-height: 80px;
+    --footer-height: 200px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    flex: 1;
+    padding: 2rem ;
+}
+
+.detalle-pieza {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+
+.technical-header {
+    border-bottom: 3px solid var(--color-secondary);
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+.technical-header h1 {
+    font-size: 2.4rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.codigo-oem {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+}
+
+.gallery {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.main-image {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.specs-box {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 2rem;
+}
+
+.specs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.specs-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+}
+
+.specs-list li:last-child {
+    border-bottom: none;
+}
+
+.specs-list strong {
+    color: var(--color-primary);
+    min-width: 160px;
+}
+
+.order-box {
+    background: var(--color-primary);
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.precio-profesional {
+    font-size: 2rem;
+    color: #27ae60;
+    margin: 0 0 1rem;
+}
+
+.iva-nota {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.cantidad-pedido label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ecf0f1;
+}
+
+.cantidad-pedido input {
+    width: calc(100% - 20px);
+    padding: 0.8rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    color: var(--color-text);
+}
+
+.btn-pedido {
+    background: var(--color-accent);
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.btn-pedido:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    .detalle-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .gallery {
+        order: -1;
+    }
+}
